@@ -12,7 +12,14 @@ def ler_fasta(arquivo):
     return lista
 
 # testando...
-lista = ler_fasta("gene_S_Brazil.fasta")
+lista = ler_fasta("gene_S_Whuhan.fasta")
 
-for i in lista:
-    print(i)
+QCG=0
+for i in lista:   
+    print(i)  
+QG=i.count('G')
+QC=i.count('C')
+PC=(QC*100)/len(i)
+PG=(QG*100)/len(i)
+print('Porcentagem de G: ', PG,'%')
+print('Porcentagem de C: ', PC,'%')  
