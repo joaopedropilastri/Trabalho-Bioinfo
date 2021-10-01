@@ -11,7 +11,7 @@ def ler_fasta(arquivo):
 
     return lista
 
-# testando...
+# finalizada
 lista = ler_fasta("gene_S_Whuhan.fasta")
 
 QCG=0
