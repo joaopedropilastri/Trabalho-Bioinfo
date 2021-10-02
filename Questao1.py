@@ -14,12 +14,15 @@ def ler_fasta(arquivo):
 # finalizada
 lista = ler_fasta("gene_S_Whuhan.fasta")
 
-QCG=0
-for i in lista:   
-    print(i)  
-QG=i.count('G')
-QC=i.count('C')
-PC=(QC*100)/len(i)
-PG=(QG*100)/len(i)
-print('Porcentagem de G: ', PG,'%')
-print('Porcentagem de C: ', PC,'%')  
+def contacg(lista):
+    QCG=0
+    for i in lista:   
+        print(i)  
+    QG=i.count('G')
+    QC=i.count('C')
+    PC=(QC*100)/len(i)
+    PG=(QG*100)/len(i)
+    print('Porcentagem de G: ', PG,'%')
+    print('Porcentagem de C: ', PC,'%')
+    
+contacg(lista)
