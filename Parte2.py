@@ -90,7 +90,6 @@ def gerar_proteina(lista):
 #2. Comparar a sequenciado proteica com a sequência de Wuhan;
 #3. Mostrar as principais alterações (qual nucleotídeo / aminoácido foi substituído e qual a posição / index da substituição)
 
-
 gene_wuhan = ler_fasta("gene_S_Whuhan.fasta")
 gene_brazil = ler_fasta("gene_S_Brazil.fasta")
 lista_str = str(gene_wuhan)
@@ -99,13 +98,16 @@ proteina_brazil = gerar_proteina(gene_brazil)
 proteina_wuhan = gerar_proteina(gene_wuhan)
 nucleotideos = min(len(gene_wuhan[0]), len(gene_brazil[0]))
 
+print("COMPARAÇÃO DE SEQUÊNCIA DE NUCLEOTÍDICOS")
+
 for nucleotideo in range (nucleotideos):
     if (gene_brazil[0][nucleotideo] != gene_wuhan[0][nucleotideo]):
-            print("Diferença no nucleotídeo ", nucleotideo, ": Troca de ", gene_wuhan[0][nucleotideo] , " por " , gene_brazil[0][nucleotideo])
+            print("Diferença na posição de nucleotídeo ", nucleotideo, ": Troca de ", gene_wuhan[0][nucleotideo] , " por " , gene_brazil[0][nucleotideo])
 
 aminoacidos = min (len(proteina_brazil), len(proteina_wuhan))
 
+print("COMPARAÇÃO DE SEQUÊNCIA PROTEICA")
+
 for aminoacido in range (aminoacidos):
     if (proteina_brazil[aminoacido] != proteina_wuhan[aminoacido]):
-            print("Diferença no aminoácido ", aminoacido, ": Troca de ", proteina_wuhan[aminoacido] , " por " , proteina_brazil[aminoacido])
-
+            print("Diferença na posição de aminoácido ", aminoacido, ": Troca de ", proteina_wuhan[aminoacido] , " por " , proteina_brazil[aminoacido])
