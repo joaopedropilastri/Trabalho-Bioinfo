@@ -92,19 +92,22 @@ def gerar_proteina(lista):
 
 gene_wuhan = ler_fasta("gene_S_Whuhan.fasta")
 gene_brazil = ler_fasta("gene_S_Brazil.fasta")
-lista_str = str(gene_wuhan)
 
 proteina_brazil = gerar_proteina(gene_brazil)
 proteina_wuhan = gerar_proteina(gene_wuhan)
-nucleotideos = min(len(gene_wuhan[0]), len(gene_brazil[0]))
+
+gene_brazil = str(gene_brazil)
+gene_wuhan = str(gene_wuhan)
+
+nucleotideos = min(len(gene_wuhan), len(gene_brazil))
 
 print("COMPARAÇÃO DE SEQUÊNCIA DE NUCLEOTÍDICOS")
 
 for nucleotideo in range (nucleotideos):
-    if (gene_brazil[0][nucleotideo] != gene_wuhan[0][nucleotideo]):
-            print("Diferença na posição de nucleotídeo ", nucleotideo, ": Troca de ", gene_wuhan[0][nucleotideo] , " por " , gene_brazil[0][nucleotideo])
+    if (gene_brazil[nucleotideo] != gene_wuhan[nucleotideo]):
+            print("Diferença na posição de nucleotídeo ", nucleotideo, ": Troca de ", gene_wuhan[nucleotideo] , " por " , gene_brazil[nucleotideo])
 
-aminoacidos = min (len(proteina_brazil), len(proteina_wuhan))
+aminoacidos = min(len(proteina_brazil), len(proteina_wuhan))
 
 print("COMPARAÇÃO DE SEQUÊNCIA PROTEICA")
 
