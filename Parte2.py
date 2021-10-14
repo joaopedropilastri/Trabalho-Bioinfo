@@ -101,7 +101,7 @@ gene_wuhan = str(gene_wuhan)
 
 nucleotideos = min(len(gene_wuhan), len(gene_brazil))
 
-print("COMPARAÇÃO DE SEQUÊNCIA DE NUCLEOTÍDICOS")
+print("COMPARAÇÃO DE SEQUÊNCIA DE NUCLEOTÍDEOS")
 
 for nucleotideo in range (nucleotideos):
     if (gene_brazil[nucleotideo] != gene_wuhan[nucleotideo]):
