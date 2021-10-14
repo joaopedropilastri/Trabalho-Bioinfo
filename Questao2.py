@@ -1,3 +1,9 @@
+#Discentes:
+#Clauber Junior Machado Fonseca - 11837442
+#Graciella dos Santos Favoreto - 11812542
+#João Pedro Pilastri Terruel - 11812584
+#Victor Pereira Moura - 11836160
+
 #lendo arquivo .fasta
 def ler_fasta(arquivo):
     sequencia = ''
