@@ -1,0 +1,5 @@
+setwd("G:/Meu Drive/Tarefas_4ºsem2021/Fundamentos de Bioinformática/Trabalho-Bioinformatica-R")
+list <- list.files(pattern="filtro")
+datalist = lapply(list, function(x)read.table(x, header=T)) 
+datafr = do.call("rbind", datalist) 
+plot(datafr$Wavelength.nm., datafr$Intensity, xlab = "comprimento de onda(nm)", ylab = "intensidade") #corrigir, gráfico de pontos (geom_line)
